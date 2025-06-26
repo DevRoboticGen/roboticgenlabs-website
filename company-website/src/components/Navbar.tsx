@@ -9,9 +9,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="labs-logo"></div>
         <div className="hidden md:flex space-x-6">
-          <a href="#careers" className="text-gray-700 hover:text-blue-600">Careers</a>
-          <a href="#ourTeam" className="text-gray-700 hover:text-blue-600">Our Team</a>
-          <a href="#letsTalk" className="text-gray-700 hover:text-blue-600">Let's Talk</a>
+          <a href="#careers" className="text-[#9BC6EB] hover:text-blue-600">Careers</a>
+          <a href="#ourTeam" className="text-[#9BC6EB] hover:text-blue-600">Our Team</a>
+          <a href="#letsTalk" className="text-[#9BC6EB] hover:text-blue-600">Let's Talk</a>
         </div>
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
           <span className="text-3xl">&#9776;</span>
