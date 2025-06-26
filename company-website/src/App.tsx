@@ -1,7 +1,13 @@
-export default function App() {
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/Herosection";
+
+function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-indigo-500 to-purple-600 text-white flex justify-center items-center text-4xl">
-      ✅ Tailwind is working!
+    <div>
+      <Navbar />
+      <HeroSection />
     </div>
   );
 }
+
+export default App;

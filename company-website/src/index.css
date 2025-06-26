@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hero-bg {
+  background-image: url('/bg-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.731);
+  background-blend-mode: darken;
+
+}
+
+.labs-logo{
+  background-image: url('/labs-logo.png');
+  background-size: cover;
+  background-position: center;
+  width: 130px;
+  height: 60px;
+}
