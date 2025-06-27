@@ -17,10 +17,10 @@ export default function HeroSection() {
         backgroundPosition: "center",
         opacity: 1,
         zIndex: 2,
+        marginTop: "30px",
           }}
         />
       </div>
-      <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <h1 className="font-Alexandria leading-tight text-[80px]">
           Shaping The Future of<br />Robotics & AI - Today
@@ -30,10 +30,10 @@ export default function HeroSection() {
         </p>
         <div/>
     
-                <div className="pt-4">
-                    <button className="relative inline-flex h-12 min-w-[120px] overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-base">
+                <div className="pt-6">
+                    <button className="relative inline-flex h-9 min-w-[120px] overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-base ">
                         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-6 py-2 text-base font-medium text-white backdrop-blur-3xl">
+                        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-6 py-2 text-base font-medium text-white backdrop-blur-3xl ">
                             Let's Talk
                         </span>
                     </button>

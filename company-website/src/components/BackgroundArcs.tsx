@@ -16,12 +16,43 @@ export default function BackgroundArcs() {
                 <circle
                     cx="50%"
                     cy="70%"
+                    r="0"
+                    fill="transparent"
+                    stroke="white"
+                    strokeWidth="2"
+                    opacity={0.1}
+                    
+                >
+          <animate
+            attributeName="r"
+            values="0;200"
+            dur="6s"
+            repeatCount="indefinite"
+          />
+           <animate
+                        attributeName="opacity"
+                        values="0;0.1"
+                        dur="6s"
+                        repeatCount="indefinite"
+                    />
+        </circle>
+                <circle
+                    cx="50%"
+                    cy="70%"
                     r="200"
                     fill="transparent"
                     stroke="white"
                     strokeWidth="2"
                     opacity={0.1}
-                />
+                    
+                >
+          <animate
+            attributeName="r"
+            values="200;400"
+            dur="6s"
+            repeatCount="indefinite"
+          />
+        </circle>
                 <circle
                     cx="50%"
                     cy="70%"
@@ -30,7 +61,14 @@ export default function BackgroundArcs() {
                     stroke="white"
                     strokeWidth="2"
                     opacity={0.1}
-                />
+                 >
+          <animate
+            attributeName="r"
+            values="400;600"
+            dur="6s"
+            repeatCount="indefinite"
+          />
+        </circle>
                 <circle
                     cx="50%"
                     cy="70%"
@@ -39,7 +77,20 @@ export default function BackgroundArcs() {
                     stroke="white"
                     strokeWidth="2"
                     opacity={0.06}
-                />
+                 >
+          <animate
+            attributeName="r"
+            values="600;800"
+            dur="6s"
+            repeatCount="indefinite"
+          />
+          <animate
+                        attributeName="opacity"
+                        values="0.1;0"
+                        dur="6s"
+                        repeatCount="indefinite"
+                    />
+        </circle>
             </svg>
             
         </div>
