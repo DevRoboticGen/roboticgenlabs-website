@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function OurFocusSection() {
   return (
     <section className="bg-[#091221] text-white py-24 px-6" id="ourFocus">
@@ -15,7 +13,7 @@ export default function OurFocusSection() {
           <div className="relative">
             <div className="absolute -bottom-6 -left-6 w-60 h-72 bg-gradient-to-br from-[#003973] to-[#E5E5BE] rounded-[30px] blur-[60px] opacity-30 z-0"></div>
             <img
-              src="/robotic-arm.png"
+              src="/robotic-arm.webp"
               alt="IOT Arm"
               className="relative z-10 rounded-[20px] shadow-2xl"
             />
@@ -36,7 +34,7 @@ export default function OurFocusSection() {
           <div className="relative">
             <div className="absolute -top-6 -right-6 w-60 h-72 bg-gradient-to-br from-[#003973] to-[#E5E5BE] rounded-[30px] blur-[60px] opacity-30 z-0"></div>
             <img
-              src="/ai-car.png"
+              src="/ai-car.webp"
               alt="AI Car"
               className="relative z-10 rounded-[20px] shadow-2xl"
             />

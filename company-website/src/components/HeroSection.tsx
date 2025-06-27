@@ -1,4 +1,5 @@
 import BackgroundArcs from "./BackgroundArcs";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 
 export default function HeroSection() {
@@ -8,11 +9,12 @@ export default function HeroSection() {
       className="relative hero-bg min-h-screen text-white pt-28 pb-20 px-6"
     >
       <div className="absolute inset-0 z-0">
+        
         <BackgroundArcs />
         <div
           className="absolute inset-0 w-full h-full"
           style={{
-        backgroundImage: "url('/bg-hero.png')",
+        backgroundImage: "url('/bg-hero.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         opacity: 1,
@@ -23,9 +25,12 @@ export default function HeroSection() {
       </div>
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <h1 className="font-Alexandria leading-tight text-[80px]">
-          Shaping The Future of<br />Robotics & AI - Today
+          <TextGenerateEffect 
+      words="Shaping The Future of Robotics & AI - Today" 
+    />
         </h1>
-        <p className="text-Inter mt-6 text-lg text-gray-200">
+        <p className="fade-in-text">
+          
           Sri Lanka’s first Robotics & AI Lab, driving innovation in smart mobility,<br /> physical AI, and industrial automation.
         </p>
         <div/>

@@ -1,13 +1,12 @@
-import { useEffect } from "react";
+import { useEffect , lazy, Suspense} from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
-import ProjectShowcase from "./components/ProjectShowcase";
-import OurFocusSection from "./components/OurFocusSection";
 
-
+const ProjectShowcase = lazy(() => import("./components/ProjectShowcase"));
+const OurFocusSection = lazy(() => import("./components/OurFocusSection"));
 
 function App() {
 
@@ -19,8 +18,10 @@ function App() {
     <div>
       <Navbar />
       <HeroSection />
+      <Suspense fallback={<div className="text-center mt-20">Loading...</div>}>
       <OurFocusSection />
       <ProjectShowcase />
+      </Suspense>
     </div>
   );
 }

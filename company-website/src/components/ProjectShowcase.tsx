@@ -1,4 +1,3 @@
-import React from "react";
 import projectImage from "../assets/stem-kit.png"; // Use your image
 
 export default function ProjectShowcase() {

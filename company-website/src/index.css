@@ -12,9 +12,25 @@
 }
 
 .labs-logo{
-  background-image: url('/labs-logo.png');
+  background-image: url('/labs-logo.svg');
   background-size: cover;
   background-position: center;
-  width: 130px;
-  height: 60px;
+  width: 120px;
+  height: 50px;
+}
+
+.fade-in-text {
+  opacity: 0;
+  animation-delay: 4s;
+  animation: fadeIn 2s ease-in-out forwards;
+  font-family: 'Inter', sans-serif;
+  margin-top: 1.5rem; /* mt-6 */
+  font-size: 1.125rem; /* text-lg */
+  color: #e5e7eb; /* text-gray-200 */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
