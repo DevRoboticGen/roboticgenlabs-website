@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 .hero-bg {
-  background-image: url('/bg-hero.jpg');
   background-size: cover;
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.731);
-  background-blend-mode: darken;
-
+  background-color: #0B111B;
+  
+  /* background-blend-mode: darken; */
+  height: 100vh;
 }
 
 .labs-logo{

@@ -14,15 +14,20 @@ export default function Navbar() {
           <a href="#letsTalk" className="text-[#9BC6EB] hover:text-blue-600">Let's Talk</a>
         </div>
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          <span className="text-3xl">&#9776;</span>
+          <span className="text-3xl text-[#9BC6EB]">&#9776;</span>
         </button>
       </div>
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2">
-          <a href="#home" className="block text-gray-700">Home</a>
-          <a href="#services" className="block text-gray-700">Services</a>
-          <a href="#about" className="block text-gray-700">About</a>
-          <a href="#contact" className="block text-gray-700">Contact</a>
+        <div
+          className="md:hidden fixed top-16 right-4 w-48 px-4 py-4 space-y-2 bg-[#0e1625] text-white rounded-lg shadow-lg transition-transform duration-300 ease-out"
+          style={{
+            transform: isOpen ? "translateY(0)" : "translateY(-20px)",
+            opacity: isOpen ? 1 : 0,
+          }}
+        >
+          <a href="#careers" className="block text-[#9BC6EB] hover:text-blue-600">Careers</a>
+          <a href="#ourTeam" className="block text-[#9BC6EB] hover:text-blue-600">Our Team</a>
+          <a href="#letsTalk" className="block text-[#9BC6EB] hover:text-blue-600">Let's Talk</a>
         </div>
       )}
     </nav>
