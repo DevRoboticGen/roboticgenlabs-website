@@ -5,6 +5,8 @@ import "aos/dist/aos.css";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import ProjectShowcase from "./components/ProjectShowcase";
+import OurFocusSection from "./components/OurFocusSection";
+
 
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
     <div>
       <Navbar />
       <HeroSection />
+      <OurFocusSection />
       <ProjectShowcase />
     </div>
   );

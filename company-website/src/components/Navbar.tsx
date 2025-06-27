@@ -9,8 +9,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <div className="labs-logo"></div>
         <div className="hidden md:flex space-x-6">
-          <a href="#careers" className="text-[#9BC6EB] hover:text-blue-600">Careers</a>
-          <a href="#ourTeam" className="text-[#9BC6EB] hover:text-blue-600">Our Team</a>
+          <a href="#ourFocus" className="text-[#9BC6EB] hover:text-blue-600">Our Focus</a>
+          <a href="#projects" className="text-[#9BC6EB] hover:text-blue-600">Projects</a>
           <a href="#letsTalk" className="text-[#9BC6EB] hover:text-blue-600">Let's Talk</a>
         </div>
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -25,8 +25,8 @@ export default function Navbar() {
             opacity: isOpen ? 1 : 0,
           }}
         >
-          <a href="#careers" className="block text-[#9BC6EB] hover:text-blue-600">Careers</a>
-          <a href="#ourTeam" className="block text-[#9BC6EB] hover:text-blue-600">Our Team</a>
+          <a href="#ourFocus" className="block text-[#9BC6EB] hover:text-blue-600">Our Focus</a>
+          <a href="#projects" className="block text-[#9BC6EB] hover:text-blue-600">Projects</a>
           <a href="#letsTalk" className="block text-[#9BC6EB] hover:text-blue-600">Let's Talk</a>
         </div>
       )}

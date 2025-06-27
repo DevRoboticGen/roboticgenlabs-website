@@ -18,6 +18,7 @@ module.exports = {
                     "100%": { opacity: "1" },
                 },
             },
+            scrollBehavior: ['responsive'],
         },
     },
     plugins: [],
