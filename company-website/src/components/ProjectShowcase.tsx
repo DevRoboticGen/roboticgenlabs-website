@@ -29,19 +29,40 @@ const projectsData = [
   },
 ];
 
-const VISIBLE_COUNT = 3;
+// Responsive visible count
+function useVisibleCount() {
+  const [visibleCount, setVisibleCount] = useState(
+    typeof window !== "undefined" && window.innerWidth < 640 ? 1 : 3
+  );
 
-function getClonedSlides(data: typeof projectsData) {
-  const last = data.slice(-VISIBLE_COUNT);
-  const first = data.slice(0, VISIBLE_COUNT);
+  useEffect(() => {
+    const handleResize = () => {
+      setVisibleCount(window.innerWidth < 640 ? 1 : 3);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return visibleCount;
+}
+
+function getClonedSlides(data: typeof projectsData, visibleCount: number) {
+  const last = data.slice(-visibleCount);
+  const first = data.slice(0, visibleCount);
   return [...last, ...data, ...first];
 }
 
 export default function ProjectShowcase() {
-  const slides = getClonedSlides(projectsData);
-  const [index, setIndex] = useState(VISIBLE_COUNT);
+  const visibleCount = useVisibleCount();
+  const slides = getClonedSlides(projectsData, visibleCount);
+  const [index, setIndex] = useState(visibleCount);
   const [transition, setTransition] = useState(true);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Reset index when visibleCount changes
+  useEffect(() => {
+    setIndex(visibleCount);
+  }, [visibleCount]);
 
   useEffect(() => {
     timeoutRef.current = setTimeout(() => {
@@ -51,16 +72,16 @@ export default function ProjectShowcase() {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
     // eslint-disable-next-line
-  }, [index]);
+  }, [index, visibleCount]);
 
   const handleTransitionEnd = () => {
-    if (index === slides.length - VISIBLE_COUNT) {
+    if (index === slides.length - visibleCount) {
       setTransition(false);
-      setIndex(VISIBLE_COUNT);
+      setIndex(visibleCount);
     }
     if (index === 0) {
       setTransition(false);
-      setIndex(slides.length - 2 * VISIBLE_COUNT);
+      setIndex(slides.length - 2 * visibleCount);
     }
   };
 
@@ -83,7 +104,10 @@ export default function ProjectShowcase() {
   };
 
   return (
-    <section className="bg-[#0B111B] text-white py-12 px-6" id="projects">
+    <section
+      className="bg-[#0B111B] text-white py-12 px-2 sm:px-6"
+      id="projects"
+    >
       <div className="max-w-6xl mx-auto">
         <h2 className="be-vietnam-pro-regular text-4xl mb-14 text-center">
           <span className="bg-gradient-to-b from-[#9CC5F2] to-[#5278A9] bg-clip-text text-transparent">
@@ -133,7 +157,7 @@ export default function ProjectShowcase() {
               transition ? "transition-transform duration-500 ease-out" : ""
             }`}
             style={{
-              transform: `translateX(-${(index * 100) / VISIBLE_COUNT}%)`,
+              transform: `translateX(-${(index * 100) / visibleCount}%)`,
             }}
             onTransitionEnd={handleTransitionEnd}
           >
@@ -142,7 +166,11 @@ export default function ProjectShowcase() {
                 key={idx}
                 role="group"
                 aria-roledescription="slide"
-                className="min-w-[33.3333%] p-4"
+                className={`p-2 sm:p-4`}
+                style={{
+                  minWidth: `${100 / visibleCount}%`,
+                  maxWidth: `${100 / visibleCount}%`,
+                }}
               >
                 <ProjectCard
                   title={proj.title}
