@@ -9,7 +9,7 @@ import oboDogImage from "../assets/obo-dog2.webp";
 const projectsData = [
   {
     title: "Transport Management Solution",
-    desc: "A smart, AI-powered transport management platform designed to optimize fleet movement, enhance route planning, and enable real-time tracking for logistics and mobility services.",
+    desc: "A smart, AI-powered transport management platform designed to monitor fleets, optimize fleet movement, enhance route planning, and enable real-time tracking for logistics and mobility services.",
     img: etmsImage,
   },
   {
