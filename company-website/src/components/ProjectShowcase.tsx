@@ -93,14 +93,20 @@ export default function ProjectShowcase() {
 
   const handlePrev = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setIndex((prev) => prev - 1);
-    setTransition(true);
+    // Prevent going before the first real card
+    if (index > 0) {
+      setIndex((prev) => prev - 1);
+      setTransition(true);
+    }
   };
 
   const handleNext = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    setIndex((prev) => prev + 1);
-    setTransition(true);
+    // Prevent going beyond the last real card
+    if (index < slides.length - visibleCount) {
+      setIndex((prev) => prev + 1);
+      setTransition(true);
+    }
   };
 
   return (
