@@ -11,6 +11,8 @@ export default function ProjectCard({ title, desc, img }: ProjectCardProps) {
       style={{
         minHeight: 400,
         background: "linear-gradient(to bottom, #0A121C, #213C5D)",
+        padding: 20,
+        height: "100%",
       }}
     >
       <div
@@ -45,7 +47,6 @@ export default function ProjectCard({ title, desc, img }: ProjectCardProps) {
             display: "inline-block",
           }}
         >
-          <br />
           <p className="inter-light text-sm text-gray-400">{desc}</p>
         </span>
       </div>
