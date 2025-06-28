@@ -27,6 +27,9 @@ export default function Navbar() {
           <a href="#projects" className="text-[#9BC6EB] hover:text-white">
             Projects
           </a>
+          <a href="#ourServices" className="text-[#9BC6EB] hover:text-white">
+            Services
+          </a>
           <a
             href="mailto:hello@roboticgen.co"
             className="block text-[#9BC6EB] hover:text-white"
@@ -51,6 +54,12 @@ export default function Navbar() {
           </a>
           <a href="#projects" className="block text-[#9BC6EB] hover:text-white">
             Projects
+          </a>
+          <a
+            href="#ourServices"
+            className="block text-[#9BC6EB] hover:text-white"
+          >
+            Services
           </a>
           <a
             href="mailto:hello@roboticgen.co"

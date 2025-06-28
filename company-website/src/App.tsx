@@ -7,6 +7,7 @@ import HeroSection from "./components/HeroSection";
 
 const ProjectShowcase = lazy(() => import("./components/ProjectShowcase"));
 const OurFocusSection = lazy(() => import("./components/OurFocusSection"));
+const ServicesSection = lazy(() => import("./components/ServicesSection"));
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
       <Suspense fallback={<div className="text-center mt-20">Loading...</div>}>
         <OurFocusSection />
         <ProjectShowcase />
+        <ServicesSection />
       </Suspense>
     </div>
   );
