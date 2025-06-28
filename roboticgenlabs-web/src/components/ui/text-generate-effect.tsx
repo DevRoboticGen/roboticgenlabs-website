@@ -55,7 +55,7 @@ export const TextGenerateEffect = ({
       <div className="mt-4">
         <div
           className={cn(
-            "be-vietnam-pro-regular leading-[104%] bg-gradient-to-b from-red-500 to-orange-500 bg-clip-text text-transparent",
+            "be-vietnam-pro-regular leading-[104%] bg-gradient-to-b from-[#FFFFFF] to-[#999999] bg-clip-text text-transparent",
             // Responsive text sizes
             "text-[32px] sm:text-[48px] md:text-[64px] lg:text-[80px]"
           )}
