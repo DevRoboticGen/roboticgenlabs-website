@@ -1,50 +1,112 @@
-import projectImage from "../assets/stem-kit.png"; // Use your image
+import { useState, useEffect, useRef } from "react";
+import ProjectCard from "./ui/project-card";
+
+import projectImage from "../assets/stem-kit.webp";
+import etmsImage from "../assets/etms.webp";
+import smartGuardImage from "../assets/smart-guard.webp";
+import oboDogImage from "../assets/obo-dog2.webp";
+
+const projectsData = [
+  {
+    title: "Transport Management Solution",
+    desc: "A smart, AI-powered transport management platform designed to optimize fleet movement, enhance route planning, and enable real-time tracking for logistics and mobility services.",
+    img: etmsImage,
+  },
+  {
+    title: "Premise Security Tracking",
+    desc: "An intelligent guard patrol monitoring solution that uses IoT and real-time tracking to ensure security personnel accountability, optimize patrol routes, and enhance premises safety through data-driven insights.",
+    img: smartGuardImage,
+  },
+  {
+    title: "Stem Learner Kits Development",
+    desc: "Hands-on educational kits built for the next generation of innovators combining electronics, coding, and robotics to make STEM learning immersive, accessible, and fun for students and educators.",
+    img: projectImage,
+  },
+  {
+    title: "Obo Dog : Quadrupod Robot",
+    desc: "A dynamic, four-legged robotic platform engineered for real-world agility and mobility designed to simulate natural movement, support research, and explore applications in search, rescue, and physical AI.",
+    img: oboDogImage,
+  },
+];
+
+const VISIBLE_COUNT = 3;
+
+function getClonedSlides(data: typeof projectsData) {
+  const last = data.slice(-VISIBLE_COUNT);
+  const first = data.slice(0, VISIBLE_COUNT);
+  return [...last, ...data, ...first];
+}
 
 export default function ProjectShowcase() {
-  const projects = [
-    {
-      title: "Transport Management Solution",
-      desc: "Sri Lanka’s first Robotics & AI Lab, driving innovation in smart mobility, physical AI, and industrial automation.",
-    },
-    {
-      title: "Premise Security Tracking",
-      desc: "Sri Lanka’s first Robotics & AI Lab, driving innovation in smart mobility, physical AI, and industrial automation.",
-    },
-    {
-      title: "Stem Learner Kits Development",
-      desc: "Sri Lanka’s first Robotics & AI Lab, driving innovation in smart mobility, physical AI, and industrial automation.",
-      img: projectImage,
-    },
-  ];
+  const slides = getClonedSlides(projectsData);
+  const [index, setIndex] = useState(VISIBLE_COUNT);
+  const [transition, setTransition] = useState(true);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    timeoutRef.current = setTimeout(() => {
+      setIndex((prev) => prev + 1);
+      setTransition(true);
+    }, 4000);
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [index]);
+
+  const handleTransitionEnd = () => {
+    if (index === slides.length - VISIBLE_COUNT) {
+      setTransition(false);
+      setIndex(VISIBLE_COUNT);
+    }
+    if (index === 0) {
+      setTransition(false);
+      setIndex(slides.length - 2 * VISIBLE_COUNT);
+    }
+  };
+
+  useEffect(() => {
+    if (!transition) {
+      setTimeout(() => setTransition(true), 20);
+    }
+  }, [transition]);
 
   return (
-    <section className="bg-[#091221] text-white py-24 px-6" id="projects">
+    <section className="bg-[#0B111B] text-white py-24 px-6" id="projects">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12 text-left text-blue-200">
-          Project <span className="text-white">Showcase</span>
+        <h2 className="be-vietnam-pro-regular text-4xl mb-14 text-center">
+          <span className="bg-gradient-to-b from-[#9CC5F2] to-[#5278A9] bg-clip-text text-transparent">
+            Project Showcase
+          </span>
         </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((proj, i) => (
-            <div
-              key={i}
-              className="rounded-3xl bg-[#0e1625] p-6 hover:scale-[1.02] transition-transform shadow-lg hover:shadow-blue-500/10"
-              data-aos="fade-up"
-              data-aos-delay={i * 150}
-            >
-              {proj.img && (
-                <img
-                  src={proj.img}
-                  alt={proj.title}
-                  className="w-34 h-34 object-contain mx-auto mb-4 hover:scale-105 transition-transform rounded-lg"
+        <div
+          className="relative w-full overflow-hidden"
+          role="region"
+          aria-roledescription="carousel"
+        >
+          <div
+            className={`flex ${
+              transition ? "transition-transform duration-500 ease-out" : ""
+            }`}
+            style={{
+              transform: `translateX(-${(index * 100) / VISIBLE_COUNT}%)`,
+            }}
+            onTransitionEnd={handleTransitionEnd}
+          >
+            {slides.map((proj, idx) => (
+              <div
+                key={idx}
+                role="group"
+                aria-roledescription="slide"
+                className="min-w-[33.3333%] p-4"
+              >
+                <ProjectCard
+                  title={proj.title}
+                  desc={proj.desc}
+                  img={proj.img}
                 />
-              )}
-              <h3 className="text-lg font-semibold text-gray-100 mb-2">
-                {proj.title}
-              </h3>
-              <p className="text-sm text-gray-400">{proj.desc}</p>
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
