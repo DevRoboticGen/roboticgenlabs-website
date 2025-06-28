@@ -29,13 +29,13 @@ export default function OurFocusSection() {
               </p>
             </div>
             <div className="relative">
-              <div className="absolute -bottom-6 -left-6 w-60 h-72 bg-gradient-to-br from-[#003973] to-[#E5E5BE] rounded-[30px] blur-[60px] opacity-30 z-0"></div>
+              <div className="absolute -bottom-6 left-20 w-60 h-72 bg-gradient-to-br from-[#5278A9] to-[#0A121C] rounded-[30px] blur-[60px] opacity-30 z-0"></div>
               <img
                 src="/robotic-arm.webp"
                 alt="IOT Arm"
-                width={446}
-                height={584}
-                className="relative z-10 rounded-[20px] shadow-2xl transition-transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/10"
+                width={344}
+                height={450}
+                className="relative z-10 rounded-[20px] shadow-2xl transition-transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/10 ml-auto"
               />
               {/* Overlayed box, 1/3 out of left and bottom */}
               <div
@@ -43,7 +43,7 @@ export default function OurFocusSection() {
                 style={{
                   width: "33%",
                   height: "33%",
-                  left: "-10%",
+                  left: "25%",
                   bottom: "-10%",
                   borderWidth: "1px",
                   borderColor: "#5278A9",
@@ -53,15 +53,19 @@ export default function OurFocusSection() {
             </div>
           </div>
 
+          <div>
+            <br />{" "}
+          </div>
+
           {/* Block 2 */}
           <div className="grid md:grid-cols-2 items-center gap-10 md:flex-row-reverse">
             <div className="relative">
-              <div className="absolute -top-6 -right-6 w-60 h-72 bg-gradient-to-br from-[#003973] to-[#E5E5BE] rounded-[30px] blur-[60px] opacity-30 z-0"></div>
+              <div className="absolute -top-6 right-20 w-60 h-72 bg-gradient-to-br from-[#5278A9] to-[#0A121C] rounded-[30px] blur-[60px] opacity-30 z-0"></div>
               <img
                 src="/ai-car.webp"
                 alt="AI Car"
-                width={446}
-                height={584}
+                width={344}
+                height={450}
                 className="relative z-10 rounded-[20px] shadow-2xl transition-transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/10"
               />
               {/* Overlayed box, 1/3 out of left and bottom */}
@@ -70,7 +74,7 @@ export default function OurFocusSection() {
                 style={{
                   width: "33%",
                   height: "33%",
-                  right: "10%",
+                  right: "25%",
                   bottom: "-10%",
                   borderWidth: "1px",
                   borderColor: "#5278A9",
@@ -94,6 +98,10 @@ export default function OurFocusSection() {
             </div>
           </div>
 
+          <div>
+            <br />{" "}
+          </div>
+
           {/* Block 3 */}
           <div className="grid md:grid-cols-2 items-center gap-10">
             {/* Text first, image second for right-side image */}
@@ -114,13 +122,13 @@ export default function OurFocusSection() {
               </p>
             </div>
             <div className="relative">
-              <div className="absolute -bottom-6 -left-6 w-60 h-72 bg-gradient-to-br from-[#003973] to-[#E5E5BE] rounded-[30px] blur-[60px] opacity-30 z-0"></div>
+              <div className="absolute -bottom-6 left-20 w-60 h-72 bg-gradient-to-br from-[#5278A9] to-[#0A121C] rounded-[30px] blur-[60px] opacity-30 z-0"></div>
               <img
                 src="/ai-robot.webp"
                 alt="Ai Robot"
-                width={446}
-                height={584}
-                className="relative z-10 rounded-[20px] shadow-2xl transition-transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/10"
+                width={344}
+                height={450}
+                className="relative z-10 rounded-[20px] shadow-2xl transition-transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/10 ml-auto"
               />
               {/* Overlayed box, 1/3 out of left and bottom */}
               <div
@@ -128,7 +136,7 @@ export default function OurFocusSection() {
                 style={{
                   width: "33%",
                   height: "33%",
-                  left: "-10%",
+                  left: "25%",
                   bottom: "-10%",
                   borderWidth: "1px",
                   borderColor: "#5278A9",
@@ -138,15 +146,19 @@ export default function OurFocusSection() {
             </div>
           </div>
 
+          <div>
+            <br />{" "}
+          </div>
+
           {/* Block 4 */}
           <div className="grid md:grid-cols-2 items-center gap-10 md:flex-row-reverse">
             <div className="relative">
-              <div className="absolute -top-6 -right-6 w-60 h-72 bg-gradient-to-br from-[#003973] to-[#E5E5BE] rounded-[30px] blur-[60px] opacity-30 z-0"></div>
+              <div className="absolute -top-6 right-20 w-60 h-72 bg-gradient-to-br from-[#5278A9] to-[#0A121C] rounded-[30px] blur-[60px] opacity-30 z-0"></div>
               <img
                 src="/obo-dog.webp"
                 alt="OBO Dog"
-                width={446}
-                height={584}
+                width={344}
+                height={450}
                 className="relative z-10 rounded-[20px] shadow-2xl transition-transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/10"
               />
               {/* Overlayed box, 1/3 out of left and bottom */}
@@ -155,7 +167,7 @@ export default function OurFocusSection() {
                 style={{
                   width: "33%",
                   height: "33%",
-                  right: "10%",
+                  right: "25%",
                   bottom: "-10%",
                   borderWidth: "1px",
                   borderColor: "#5278A9",
