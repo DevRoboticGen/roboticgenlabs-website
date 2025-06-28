@@ -48,3 +48,41 @@
   font-style: normal;
   color: #C6E4FF;
 }
+
+.inter-light {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+.our-focus-paragraph {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.625;  /* relaxed */
+}
+
+.our-focus-span {
+  background: linear-gradient(to right, #B3CDEF, #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.our-focus-topic-span {
+  background: linear-gradient(to top, #FFFFFF, #999999b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.our-focus-topic-header {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-size: 3rem; /* text-5xl */
+  margin-bottom: 1rem; /* mb-4 */
+}
