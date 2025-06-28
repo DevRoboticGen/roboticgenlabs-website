@@ -33,7 +33,7 @@ export default function HeroSection() {
         </p>
         <div />
 
-        <div className="pt-4 flex justify-center">
+        <div className="pt-2 flex justify-center">
           <a href="mailto:hello@roboticgen.co">
             <button
               className="relative inline-flex h-10 min-w-[120px] overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-base active:scale-95 transition-transform duration-100 hover:scale-110"
