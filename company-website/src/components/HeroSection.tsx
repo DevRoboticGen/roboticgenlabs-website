@@ -1,4 +1,4 @@
-import BackgroundArcs from "./BackgroundArcs";
+import BackgroundArcs from "./ui/BackgroundArcs";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 export default function HeroSection() {

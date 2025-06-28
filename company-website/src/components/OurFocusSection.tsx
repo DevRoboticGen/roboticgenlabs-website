@@ -33,6 +33,8 @@ export default function OurFocusSection() {
               <img
                 src="/robotic-arm.webp"
                 alt="IOT Arm"
+                width={446}
+                height={584}
                 className="relative z-10 rounded-[20px] shadow-2xl transition-transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/10"
               />
             </div>
@@ -45,6 +47,8 @@ export default function OurFocusSection() {
               <img
                 src="/ai-car.webp"
                 alt="AI Car"
+                width={446}
+                height={584}
                 className="relative z-10 rounded-[20px] shadow-2xl transition-transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/10"
               />
             </div>
@@ -88,6 +92,8 @@ export default function OurFocusSection() {
               <img
                 src="/ai-robot.webp"
                 alt="Ai Robot"
+                width={446}
+                height={584}
                 className="relative z-10 rounded-[20px] shadow-2xl transition-transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/10"
               />
             </div>
@@ -100,6 +106,8 @@ export default function OurFocusSection() {
               <img
                 src="/obo-dog.webp"
                 alt="OBO Dog"
+                width={446}
+                height={584}
                 className="relative z-10 rounded-[20px] shadow-2xl transition-transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/10"
               />
             </div>
