@@ -96,4 +96,13 @@
 
 html {
   scroll-behavior: smooth;
+  overscroll-behavior: none;
+  background-color: #0B111B;
+}
+
+.footer {
+  background: linear-gradient(to bottom right, #020d1f, #132e57);
+  color: white;
+  padding: 6rem 1.5rem; /* py-12 px-6 */
+  margin-top: 6rem; /* mt-24 */
 }

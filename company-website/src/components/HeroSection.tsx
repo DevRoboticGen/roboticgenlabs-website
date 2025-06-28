@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative hero-bg min-h-screen text-white pt-28 pb-20 px-6"
+      className="relative hero-bg min-h-screen text-white pt-28 pb-20 px-4 sm:px-6"
     >
       <div className="absolute inset-0 z-0">
         <BackgroundArcs />
@@ -22,21 +22,19 @@ export default function HeroSection() {
         />
       </div>
       <div className="relative z-10 max-w-4xl mx-auto text-center">
-        <h1>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
           <TextGenerateEffect words="Intelligent Machines For A Better Tomorrow" />
         </h1>
-        <p className="fade-in-text">
+        <p className="fade-in-text text-base sm:text-lg md:text-xl mb-6">
           Sri Lanka’s first Robotics & AI Lab, driving innovation in smart
           mobility,
-          <br /> physical AI, and industrial automation.
+          <br className="hidden sm:block" /> physical AI, and industrial
+          automation.
         </p>
         <div />
 
-        <div className="pt-6">
-          <a
-            href="mailto:hello@roboticgen.co"
-            className="relative inline-flex h-10 min-w-[120px] overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-base"
-          >
+        <div className="pt-6 flex justify-center">
+          <a href="mailto:hello@roboticgen.co">
             <button
               className="relative inline-flex h-10 min-w-[120px] overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-base active:scale-95 transition-transform duration-100 hover:scale-110"
               type="button"

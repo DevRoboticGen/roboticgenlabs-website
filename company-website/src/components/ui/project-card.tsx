@@ -9,7 +9,7 @@ export default function ProjectCard({ title, desc, img }: ProjectCardProps) {
     <div
       className="rounded-xl shadow border border-blue-400 border-opacity-40 overflow-hidden group cursor-pointer"
       style={{
-        minHeight: 380,
+        minHeight: 400,
         background: "linear-gradient(to bottom, #0A121C, #213C5D)",
       }}
     >
@@ -45,6 +45,7 @@ export default function ProjectCard({ title, desc, img }: ProjectCardProps) {
             display: "inline-block",
           }}
         >
+          <br />
           <p className="inter-light text-sm text-gray-400">{desc}</p>
         </span>
       </div>

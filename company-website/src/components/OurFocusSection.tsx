@@ -37,6 +37,19 @@ export default function OurFocusSection() {
                 height={584}
                 className="relative z-10 rounded-[20px] shadow-2xl transition-transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/10"
               />
+              {/* Overlayed box, 1/3 out of left and bottom */}
+              <div
+                className="absolute bg-gradient-to-b from-[#0A121C] to-[#2E5482] rounded-[16px] opacity-100 z-5 pointer-events-none"
+                style={{
+                  width: "33%",
+                  height: "33%",
+                  left: "-10%",
+                  bottom: "-10%",
+                  borderWidth: "1px",
+                  borderColor: "#5278A9",
+                  borderStyle: "solid",
+                }}
+              />
             </div>
           </div>
 
@@ -50,6 +63,19 @@ export default function OurFocusSection() {
                 width={446}
                 height={584}
                 className="relative z-10 rounded-[20px] shadow-2xl transition-transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/10"
+              />
+              {/* Overlayed box, 1/3 out of left and bottom */}
+              <div
+                className="absolute bg-gradient-to-b from-[#0A121C] to-[#2E5482] rounded-[16px] opacity-100 z-5 pointer-events-none"
+                style={{
+                  width: "33%",
+                  height: "33%",
+                  right: "10%",
+                  bottom: "-10%",
+                  borderWidth: "1px",
+                  borderColor: "#5278A9",
+                  borderStyle: "solid",
+                }}
               />
             </div>
             <div>
@@ -96,6 +122,19 @@ export default function OurFocusSection() {
                 height={584}
                 className="relative z-10 rounded-[20px] shadow-2xl transition-transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/10"
               />
+              {/* Overlayed box, 1/3 out of left and bottom */}
+              <div
+                className="absolute bg-gradient-to-b from-[#0A121C] to-[#2E5482] rounded-[16px] opacity-100 z-5 pointer-events-none"
+                style={{
+                  width: "33%",
+                  height: "33%",
+                  left: "-10%",
+                  bottom: "-10%",
+                  borderWidth: "1px",
+                  borderColor: "#5278A9",
+                  borderStyle: "solid",
+                }}
+              />
             </div>
           </div>
 
@@ -109,6 +148,19 @@ export default function OurFocusSection() {
                 width={446}
                 height={584}
                 className="relative z-10 rounded-[20px] shadow-2xl transition-transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/10"
+              />
+              {/* Overlayed box, 1/3 out of left and bottom */}
+              <div
+                className="absolute bg-gradient-to-b from-[#0A121C] to-[#2E5482] rounded-[16px] opacity-100 z-5 pointer-events-none"
+                style={{
+                  width: "33%",
+                  height: "33%",
+                  right: "10%",
+                  bottom: "-10%",
+                  borderWidth: "1px",
+                  borderColor: "#5278A9",
+                  borderStyle: "solid",
+                }}
               />
             </div>
             <div>

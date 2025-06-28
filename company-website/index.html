@@ -8,9 +8,40 @@
     <meta name="keywords" content="Robotics, AI, IoT, Innovation, Technology" />
     <meta name="author" content="Roboticgen Labs" />
     <title>Roboticgen Labs</title>
+    <style>
+      /* Simple preloader (no animations) */
+      #preloader {
+        background-color: #0B111B;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.4s ease;
+      }
+
+      #preloader img {
+        height: 80px;
+        width: auto;
+      }
+    </style>
   </head>
-  <body>
+  <body style="background-color: #0B111B;">
+    <div id="preloader">
+      <img src="/labs-logo.svg" alt="Roboticgen Logo" />
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Fade out preloader on full load
+      window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+        if (preloader) {
+          preloader.style.opacity = "0";
+          setTimeout(() => preloader.remove(), 100);
+        }
+      });
+    </script>
   </body>
 </html>

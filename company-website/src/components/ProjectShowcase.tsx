@@ -45,12 +45,12 @@ export default function ProjectShowcase() {
 
   useEffect(() => {
     timeoutRef.current = setTimeout(() => {
-      setIndex((prev) => prev + 1);
-      setTransition(true);
+      handleNext();
     }, 4000);
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
+    // eslint-disable-next-line
   }, [index]);
 
   const handleTransitionEnd = () => {
@@ -70,8 +70,20 @@ export default function ProjectShowcase() {
     }
   }, [transition]);
 
+  const handlePrev = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIndex((prev) => prev - 1);
+    setTransition(true);
+  };
+
+  const handleNext = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIndex((prev) => prev + 1);
+    setTransition(true);
+  };
+
   return (
-    <section className="bg-[#0B111B] text-white py-24 px-6" id="projects">
+    <section className="bg-[#0B111B] text-white py-12 px-6" id="projects">
       <div className="max-w-6xl mx-auto">
         <h2 className="be-vietnam-pro-regular text-4xl mb-14 text-center">
           <span className="bg-gradient-to-b from-[#9CC5F2] to-[#5278A9] bg-clip-text text-transparent">
@@ -83,6 +95,39 @@ export default function ProjectShowcase() {
           role="region"
           aria-roledescription="carousel"
         >
+          {/* Arrows */}
+          <button
+            aria-label="Previous"
+            onClick={handlePrev}
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-[#1a2332] hover:bg-[#22304a] rounded-full p-2 shadow transition"
+            style={{ outline: "none" }}
+          >
+            <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
+              <path
+                d="M13 16l-5-6 5-6"
+                stroke="#9CC5F2"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            aria-label="Next"
+            onClick={handleNext}
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-[#1a2332] hover:bg-[#22304a] rounded-full p-2 shadow transition"
+            style={{ outline: "none" }}
+          >
+            <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
+              <path
+                d="M7 4l5 6-5 6"
+                stroke="#9CC5F2"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
           <div
             className={`flex ${
               transition ? "transition-transform duration-500 ease-out" : ""

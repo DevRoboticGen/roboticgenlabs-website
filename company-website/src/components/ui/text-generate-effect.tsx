@@ -54,7 +54,11 @@ export const TextGenerateEffect = ({
     <div className={cn("", className)}>
       <div className="mt-4">
         <div
-          className="be-vietnam-pro-regular leading-[104%] text-[80px] bg-gradient-to-b from-red-500 to-orange-500 bg-clip-text text-transparent"
+          className={cn(
+            "be-vietnam-pro-regular leading-[104%] bg-gradient-to-b from-red-500 to-orange-500 bg-clip-text text-transparent",
+            // Responsive text sizes
+            "text-[32px] sm:text-[48px] md:text-[64px] lg:text-[80px]"
+          )}
         >
           {renderWords()}
         </div>

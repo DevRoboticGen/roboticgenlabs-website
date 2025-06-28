@@ -16,7 +16,7 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <section className="bg-[#0B111B] text-white py-28 px-6" id="ourServices">
+    <section className="bg-[#0B111B] text-white py-12 px-6" id="ourServices">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="be-vietnam-pro-regular text-4xl mb-14 text-center">
           <span className="bg-gradient-to-b from-[#9CC5F2] to-[#5278A9] bg-clip-text text-transparent">
@@ -30,7 +30,7 @@ export default function ServicesSection() {
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className="text-left text-3xl sm:text-4xl lg:text-5xl font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-t from-[#FFFFFF] to-[#99999900] transition-all duration-300 hover:text-white hover:bg-none"
+              className="text-left text-3xl sm:text-4xl lg:text-5xl font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-t from-[#FFFFFF] to-[#bcbcbc20] transition-all duration-300 hover:text-white hover:bg-none"
             >
               {service}
             </li>
