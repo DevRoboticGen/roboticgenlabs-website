@@ -33,17 +33,26 @@ export default function HeroSection() {
         <div />
 
         <div className="pt-6">
-          <button className="relative inline-flex h-10 min-w-[120px] overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-base ">
-            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#121A25_0%,#485B74_50%,#485B74_100%)]" />
-            <span
-              className="manrope-250 inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-6 py-2 text-base font-medium text-white backdrop-blur-3xl"
-              style={{
-                background: "linear-gradient(180deg, #121A25 0%, #45648B 100%)",
-              }}
+          <a
+            href="mailto:hello@roboticgen.co"
+            className="relative inline-flex h-10 min-w-[120px] overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-base"
+          >
+            <button
+              className="relative inline-flex h-10 min-w-[120px] overflow-hidden rounded-full p-[2px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-base active:scale-95 transition-transform duration-100 hover:scale-110"
+              type="button"
             >
-              Let's Talk
-            </span>
-          </button>
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#121A25_0%,#485B74_50%,#485B74_100%)]" />
+              <span
+                className="manrope-250 inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full px-6 py-2 text-base font-medium text-white backdrop-blur-3xl"
+                style={{
+                  background:
+                    "linear-gradient(180deg, #121A25 0%, #45648B 100%)",
+                }}
+              >
+                Let's Talk
+              </span>
+            </button>
+          </a>
         </div>
       </div>
     </section>
