@@ -29,7 +29,7 @@ export default function OurFocusSection() {
               </p>
             </div>
             <div className="relative">
-              <div className="absolute -bottom-6 left-20 w-60 h-72 bg-gradient-to-br from-[#5278A9] to-[#0A121C] rounded-[30px] blur-[60px] opacity-30 z-0"></div>
+              <div className="absolute -bottom-6 left-20 w-60 h-72 bg-gradient-to-br from-[#5278A9] to-[#0A121C] rounded-[30px] blur-[60px] opacity-30 z-0 animate-pulse"></div>
               <img
                 src="/robotic-arm.webp"
                 alt="IOT Arm"
@@ -39,7 +39,7 @@ export default function OurFocusSection() {
               />
               {/* Overlayed box, 1/3 out of left and bottom */}
               <div
-                className="absolute bg-gradient-to-b from-[#0A121C] to-[#2E5482] rounded-[16px] opacity-100 z-5 pointer-events-none"
+                className="absolute bg-gradient-to-b from-[#0A121C] to-[#2E5482] rounded-[16px] opacity-100 z-5 pointer-events-none animate-pulse"
                 style={{
                   width: "33%",
                   height: "33%",
@@ -60,7 +60,7 @@ export default function OurFocusSection() {
           {/* Block 2 */}
           <div className="grid md:grid-cols-2 items-center gap-10 md:flex-row-reverse">
             <div className="relative">
-              <div className="absolute -top-6 right-20 w-60 h-72 bg-gradient-to-br from-[#5278A9] to-[#0A121C] rounded-[30px] blur-[60px] opacity-30 z-0"></div>
+              <div className="absolute -top-6 right-20 w-60 h-72 bg-gradient-to-br from-[#5278A9] to-[#0A121C] rounded-[30px] blur-[60px] opacity-30 z-0 animate-pulse"></div>
               <img
                 src="/ai-car.webp"
                 alt="AI Car"
@@ -70,7 +70,7 @@ export default function OurFocusSection() {
               />
               {/* Overlayed box, 1/3 out of left and bottom */}
               <div
-                className="absolute bg-gradient-to-b from-[#0A121C] to-[#2E5482] rounded-[16px] opacity-100 z-5 pointer-events-none"
+                className="absolute bg-gradient-to-b from-[#0A121C] to-[#2E5482] rounded-[16px] opacity-100 z-5 pointer-events-none animate-pulse"
                 style={{
                   width: "33%",
                   height: "33%",
@@ -122,7 +122,7 @@ export default function OurFocusSection() {
               </p>
             </div>
             <div className="relative">
-              <div className="absolute -bottom-6 left-20 w-60 h-72 bg-gradient-to-br from-[#5278A9] to-[#0A121C] rounded-[30px] blur-[60px] opacity-30 z-0"></div>
+              <div className="absolute -bottom-6 left-20 w-60 h-72 bg-gradient-to-br from-[#5278A9] to-[#0A121C] rounded-[30px] blur-[60px] opacity-30 z-0 animate-pulse"></div>
               <img
                 src="/ai-robot.webp"
                 alt="Ai Robot"
@@ -132,7 +132,7 @@ export default function OurFocusSection() {
               />
               {/* Overlayed box, 1/3 out of left and bottom */}
               <div
-                className="absolute bg-gradient-to-b from-[#0A121C] to-[#2E5482] rounded-[16px] opacity-100 z-5 pointer-events-none"
+                className="absolute bg-gradient-to-b from-[#0A121C] to-[#2E5482] rounded-[16px] opacity-100 z-5 pointer-events-none animate-pulse"
                 style={{
                   width: "33%",
                   height: "33%",
@@ -153,7 +153,7 @@ export default function OurFocusSection() {
           {/* Block 4 */}
           <div className="grid md:grid-cols-2 items-center gap-10 md:flex-row-reverse">
             <div className="relative">
-              <div className="absolute -top-6 right-20 w-60 h-72 bg-gradient-to-br from-[#5278A9] to-[#0A121C] rounded-[30px] blur-[60px] opacity-30 z-0"></div>
+              <div className="absolute -top-6 right-20 w-60 h-72 bg-gradient-to-br from-[#5278A9] to-[#0A121C] rounded-[30px] blur-[60px] opacity-30 z-0 animate-pulse"></div>
               <img
                 src="/obo-dog.webp"
                 alt="OBO Dog"
@@ -163,7 +163,7 @@ export default function OurFocusSection() {
               />
               {/* Overlayed box, 1/3 out of left and bottom */}
               <div
-                className="absolute bg-gradient-to-b from-[#0A121C] to-[#2E5482] rounded-[16px] opacity-100 z-5 pointer-events-none"
+                className="absolute bg-gradient-to-b from-[#0A121C] to-[#2E5482] rounded-[16px] opacity-100 z-5 pointer-events-none animate-pulse"
                 style={{
                   width: "33%",
                   height: "33%",
