@@ -15,7 +15,7 @@ export default function OurFocusSection() {
             <div>
               <h3 className="our-focus-topic-header">
                 <span className="our-focus-topic-span">
-                  IOT And <br /> Automation Solutions
+                  IoT and <br /> Automation Solutions
                 </span>
               </h3>
               <p className="our-focus-paragraph">

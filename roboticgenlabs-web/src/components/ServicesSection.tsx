@@ -4,11 +4,11 @@ import "aos/dist/aos.css";
 
 export default function ServicesSection() {
   const services = [
+    "Robotics Engineering",
+    "Automation Engineering",
     "Hardware Development",
     "Software Development",
     "Product Design",
-    "UI UX Design",
-    "Robotics Engineering",
   ];
 
   useEffect(() => {
