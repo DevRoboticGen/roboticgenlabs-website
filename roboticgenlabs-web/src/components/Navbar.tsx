@@ -31,6 +31,14 @@ export default function Navbar() {
             Services
           </a>
           <a
+            href="https://roboticgen.co"
+            className="block text-[#9BC6EB] hover:text-white"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            About Us
+          </a>
+          <a
             href="mailto:hello@roboticgen.co"
             className="block text-[#9BC6EB] hover:text-white"
           >
