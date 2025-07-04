@@ -30,7 +30,8 @@ export default function ServicesSection() {
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className="text-left text-3xl sm:text-4xl lg:text-5xl font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-t from-[#FFFFFF] to-[#bcbcbc20] transition-all duration-300 hover:text-white hover:bg-none"
+              className="text-left text-3xl sm:text-4xl lg:text-5xl font-medium tracking-wide text-transparent bg-clip-text bg-gradient-to-t from-[#FFFFFF] to-[#bcbcbc20] transition-all duration-300 hover:text-white hover:bg-none leading-tight lg:leading-[1.2]"
+              style={{ paddingBottom: "0.2em" }}
             >
               {service}
             </li>
