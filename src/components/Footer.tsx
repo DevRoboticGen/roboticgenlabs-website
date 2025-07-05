@@ -12,14 +12,6 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
         {/* Left Block */}
         <div className="space-y-4">
-          <a
-            href="https://roboticgen.co"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-[#9BC6EB] text-[#9BC6EB] hover:bg-[#9BC6EB] hover:text-white transition-colors duration-200"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            About Us
-          </a>
           <p className="text-sm">
             <strong>RoboticGen (Pvt) Ltd</strong>
             <br />
