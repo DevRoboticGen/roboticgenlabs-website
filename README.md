@@ -2,13 +2,13 @@
 
 Welcome to the official repository of **RoboticGen Labs**, Sri Lanka’s first Robotics & AI innovation lab. This website serves as the digital presence for showcasing our smart mobility solutions, physical AI research, product engineering, and educational outreach.
 
-![RoboticGen Labs Banner](./public/og-banner.png) 
+![RoboticGen Labs Banner](./public/Open_Graph_Image.png) 
 
 ---
 
 ## 🌐 Live Site
 
-🔗 Visit: [https://roboticgen.vercel.app](https://roboticgen.vercel.app)
+🔗 Visit: [https://roboticgenlabs.com](https://roboticgenlabs.com)
 
 ---
 
