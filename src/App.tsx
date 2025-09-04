@@ -1,56 +1,38 @@
-import { useEffect, useState, lazy, Suspense } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { lazy, Suspense } from "react";
+import RouteEffects from "./components/RouteEffects";
 
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
+const Home = lazy(() => import("./pages/Home"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 
-const ProjectShowcase = lazy(() => import("./components/ProjectShowcase"));
-const OurFocusSection = lazy(() => import("./components/OurFocusSection"));
-const ServicesSection = lazy(() => import("./components/ServicesSection"));
-const Footer = lazy(() => import("./components/Footer"));
-
-function App() {
-  const [animationsReady, setAnimationsReady] = useState(false);
-
-  // Wait until preloader is removed from DOM
-  useEffect(() => {
-    const preloader = document.getElementById("preloader");
-
-    if (!preloader) {
-      setAnimationsReady(true);
-      return;
-    }
-
-    const observer = new MutationObserver(() => {
-      if (!document.getElementById("preloader")) {
-        observer.disconnect();
-        setAnimationsReady(true);
-      }
-    });
-
-    observer.observe(document.body, { childList: true });
-  }, []);
-
-  // Initialize AOS after preloader is gone
-  useEffect(() => {
-    if (animationsReady) {
-      AOS.init({ duration: 800, once: true });
-    }
-  }, [animationsReady]);
-
+export default function App() {
   return (
-    <div>
-      <Navbar />
-      <HeroSection />
+    <Router>
+      <RouteEffects />
+
+      {/* Optional quick nav for testing, remove if Navbar already has links */}
+      {/* <nav className="p-3 text-sm">
+        <Link to="/" className="mr-3 underline">Home</Link>
+        <Link to="/privacy-policy" className="underline">Privacy Policy</Link>
+      </nav> */}
+
       <Suspense fallback={<div className="text-center mt-20">Loading...</div>}>
-        <OurFocusSection />
-        <ProjectShowcase />
-        <ServicesSection />
-        <Footer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route
+            path="*"
+            element={
+              <div className="min-h-screen flex items-center justify-center flex-col gap-4 text-white">
+                <h1 className="text-3xl font-bold">404 — Page Not Found</h1>
+                <Link to="/" className="underline">
+                  Go back home
+                </Link>
+              </div>
+            }
+          />
+        </Routes>
       </Suspense>
-    </div>
+    </Router>
   );
 }
-
-export default App;

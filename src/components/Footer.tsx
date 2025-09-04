@@ -28,6 +28,15 @@ export default function Footer() {
             2025 © RoboticGen Pvt Ltd. All Rights Reserved
           </p>
 
+          <div className="mt-4 md:mt-0">
+            <a
+              href="/privacy-policy"
+              className="text-sm underline text-gray-400 hover:text-white transition"
+            >
+              Privacy Policy
+            </a>
+          </div>
+
           <div className="flex gap-4 mt-2 text-xl text-white">
             <a
               href="https://www.facebook.com/RoboticGenInc"
