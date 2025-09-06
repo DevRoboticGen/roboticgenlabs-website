@@ -25,6 +25,10 @@ export default function PrivacyPolicy() {
           Privacy Policy for Obo Car Controller App
         </h1>
 
+        <p className="mb-4 text-gray-400 text-base italic tracking-wide">
+          Version 1.2
+        </p>
+
         <p className="mb-4">
           This privacy policy explains how we collect, use, and disclose your
           information when you use the Obo Car Controller mobile application
@@ -110,6 +114,15 @@ export default function PrivacyPolicy() {
           <li>
             <strong>Storage (if applicable):</strong> To save configuration
             files or logs on your device; data is not shared externally.
+          </li>
+          <li>
+            <strong>Internet:</strong> Required for connecting to cloud
+            services, analytics, and support features. No unnecessary data is
+            transmitted.
+          </li>
+          <li>
+            <strong>Device Vibration:</strong> Used to provide haptic feedback
+            during app interactions.
           </li>
         </ul>
         <p className="mb-4">
