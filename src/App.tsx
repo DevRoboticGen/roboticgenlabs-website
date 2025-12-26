@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import RouteEffects from "./components/RouteEffects";
 
 const Home = lazy(() => import("./pages/Home"));
@@ -8,6 +9,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 export default function App() {
   return (
     <Router>
+      <SpeedInsights />
       <RouteEffects />
 
       {/* Optional quick nav for testing, remove if Navbar already has links */}
