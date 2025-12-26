@@ -114,7 +114,7 @@ export default function OurFocusSection() {
               <p className="our-focus-paragraph">
                 <span className="our-focus-span">
                   Physical AI is the next evolution in embodied intelligence —
-                  where software meets the physical world. Roboticgen builds
+                  where software meets the physical world. RoboticGen builds
                   systems that can sense, learn, adapt, and act. We bring AI
                   into motion with robotics that think and respond like living
                   systems.
